@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 COPY .env .
-COPY your_script.py .
+COPY app.py .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
