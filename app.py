@@ -92,5 +92,5 @@ if table_selected:
         if len(data) > 10000:
             st.warning(f"La tabla '{table_selected}' tiene {len(data):,} filas. La carga y renderizado pueden ser lentos.")
         st.markdown('<div class="respuesta-box">', unsafe_allow_html=True)
-        st.dataframe(data, use_container_width=True, height=800)
+        st.dataframe(data, use_container_width=True, height=1000)
         st.markdown('</div>', unsafe_allow_html=True)
