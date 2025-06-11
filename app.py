@@ -62,7 +62,7 @@ def get_table_names():
         st.error(f"Error de conexión a la base de datos: {e}")
         return []
 
-if st.sidebar.button("🔄 Actualizar datos"):
+if st.sidebar.button("Actualizar datos"):
     st.cache_data.clear()
 
 @st.cache_data(show_spinner=False)
