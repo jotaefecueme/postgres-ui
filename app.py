@@ -32,7 +32,14 @@ CSS = """
         border: 1px solid #ddd;
     }
 }
+
+/* Ajusta el espacio vertical general */
+main .block-container {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
 """
+
 st.markdown(f"<style>{CSS}</style>", unsafe_allow_html=True)
 
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -85,5 +92,5 @@ if table_selected:
         if len(data) > 10000:
             st.warning(f"La tabla '{table_selected}' tiene {len(data):,} filas. La carga y renderizado pueden ser lentos.")
         st.markdown('<div class="respuesta-box">', unsafe_allow_html=True)
-        st.dataframe(data, use_container_width=True)
+        st.dataframe(data, use_container_width=True, height=800)
         st.markdown('</div>', unsafe_allow_html=True)
